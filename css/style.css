@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --main-orange: hsl(35, 77%, 62%);
+  --main-red: hsl(5, 85%, 63%);
+  --main-OffWhite: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 55px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li a {
+  color: var(--Dark-grayish-blue);
+}
+
+header nav ul li a:hover {
+  color: var(--main-red);
+}
+
+header nav img {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  header nav {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  header nav img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: var(--main-OffWhite);
+    width: 260px;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    bottom: 0;
+  }
+  header nav ul li a {
+    color: black;
+  }
+  header nav .close {
+    display: none;
+  }
+  header nav:hover .close {
+    display: block;
+  }
+  header nav:hover ul {
+    right: 0;
+  }
+}
+
+main {
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+main .img {
+  grid-column: 1/3;
+  height: 260px;
+  background-image: url(/assets/images/image-web-3-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .heading {
+  grid-column: 1/2;
+}
+
+main .heading h1 {
+  padding-right: 50px;
+  font-size: 54px;
+}
+
+main .intro-text {
+  grid-column: 2/3;
+  margin-bottom: 50px;
+}
+
+main .intro-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+  padding-bottom: 40px;
+}
+
+main .intro-text a {
+  display: block;
+  width: fit-content;
+  background: var(--main-red);
+  outline: none;
+  border: none;
+  padding: 15px 35px;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .intro-text a:hover {
+  background-color: var(--Very-dark-blue);
+}
+
+main .news {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  background: var(--Very-dark-blue);
+  padding: 25px;
+  height: 490px;
+  margin-bottom: 50px;
+}
+
+main .news h2 {
+  color: var(--main-orange);
+  font-size: 35px;
+}
+
+main .news div {
+  padding: 25px 0;
+}
+
+main .news div:not(:last-of-type) {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+main .news div h3 {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .news div h3:hover {
+  color: var(--main-orange);
+}
+
+main .news div p {
+  color: var(--Grayish-blue);
+  margin-top: 12px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+main .box {
+  display: flex;
+}
+
+main .box img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+main .box .text span {
+  color: var(--Grayish-blue);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+main .box .text h4 {
+  font-size: 20px;
+  margin: 7px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .box .text h4:hover {
+  color: var(--main-red);
+}
+
+main .box .text p {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 15px;
+    display: block;
+  }
+  main .img {
+    background-image: url(/assets/images/image-web-3-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .heading h1 {
+    font-size: 43px;
+    margin-top: 10px;
+  }
+  main .intro-text p {
+    padding-bottom: 25px;
+  }
+  main .box {
+    margin-top: 30px;
+  }
+}
