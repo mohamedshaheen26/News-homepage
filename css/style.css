@@ -28,7 +28,7 @@ ul {
 }
 
 header {
-  padding: 80px 170px;
+  padding: 80px 170px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,7 +159,6 @@ main .news {
   grid-row: 1/3;
   background: var(--Very-dark-blue);
   padding: 25px;
-  height: 490px;
   margin-bottom: 50px;
 }
 
