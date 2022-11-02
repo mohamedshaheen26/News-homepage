@@ -107,7 +107,7 @@ main {
 
 main .img {
   grid-column: 1/3;
-  height: 260px;
+  height: 280px;
   background-image: url(../assets/images/image-web-3-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,6 +120,9 @@ main .heading {
 main .heading h1 {
   padding-right: 50px;
   font-size: 54px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--Very-dark-blue);
 }
 
 main .intro-text {
@@ -198,7 +201,7 @@ main .box {
 }
 
 main .box img {
-  width: 80px;
+  width: 90px;
   margin-right: 20px;
 }
 
